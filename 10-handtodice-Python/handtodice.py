@@ -6,5 +6,9 @@
 # Hint: You might find // and % useful here, and also getKthDigit().
 
 def handtodice(hand):
-	# your code goes here
-	pass
+	a=[]
+	string=str(hand)
+	for i in string:
+		a.append(int(i))
+	return tuple(a)
+	
