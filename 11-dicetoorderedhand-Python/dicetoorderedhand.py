@@ -11,5 +11,9 @@
 
 
 def dicetoorderedhand(a, b, c):
-	# your code goes here
-	pass
+	li=[a,b,c]
+	li.sort()
+	string=""
+	for i in li:
+		string=string+str(i)
+	return int(string)
