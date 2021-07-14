@@ -37,7 +37,10 @@ def sortUSA():
 
 def alphaAsia():
     '''Return all the cities in Asia continent in alphabetical order'''
-    pass
+    for i,k in locations['Asia'].items():
+        
+
 
 # Note: Check for test cases to understand the output format.
-locations = {'North America': {'USA': ['Mountain View']}}
+locations ={'North America': {'USA': ['Mountain View']},
+            'Asia':{'India':['Hyderbad']}}
