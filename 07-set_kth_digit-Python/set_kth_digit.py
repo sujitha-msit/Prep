@@ -7,5 +7,13 @@
 
 
 def fun_set_kth_digit(n, k, d):
-		return 0
+
+	length=len(str(n))
+	div=10**(length-k-1)
+	first=n/div
+	last=n%div
+	first=(first//10)*10+d
+	number=first*div+last
+	print(int(number))
+
 
