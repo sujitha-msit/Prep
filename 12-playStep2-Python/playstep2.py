@@ -34,5 +34,27 @@
 # Hint: Also, remember to use % to get the one's digit, and use //= to get rid of the one's digit.
 
 def playstep2(hand, dice):
-	# your code goes here
-	pass
+	han=list(str(hand))
+	if len(set(han))<3:
+		for i in han:
+			if han.count(i)>1:
+				hand=str(dice)[-1]+str(i)*2
+				
+	else:
+		hand=hand[0]+str(dice)[-1]+str(dice)[-2]
+	hand=list(hand)
+	hand.sort(reverse=True)
+	hand=''.join(hand)
+	return hand
+
+		
+
+	
+
+
+
+
+# result=list(hand)
+# result.sort(reverse=True)
+# result=''.join(result)
+# print(result)
