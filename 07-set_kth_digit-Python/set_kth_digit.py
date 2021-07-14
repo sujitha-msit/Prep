@@ -15,5 +15,3 @@ def fun_set_kth_digit(n, k, d):
 	first=(first//10)*10+d
 	number=first*div+last
 	print(int(number))
-
-
