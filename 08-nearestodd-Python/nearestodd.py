@@ -6,6 +6,18 @@
 
 
 def fun_nearestodd(n):
-	return 0
+	
 
 
+	if int(n)<n:
+		if int(n)%2==0:
+			return int(n)+1
+		else:
+			return int(n)
+	elif int(n)==n:
+		if int(n)%2==0:
+			return int(n)-1
+		else:
+			return int(n)
+	
+print(fun_nearestodd(25))
