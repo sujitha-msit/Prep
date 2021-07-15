@@ -5,4 +5,6 @@
 
 def removeduplicate(text):
 	# Your code goes here
-	pass
+	uni=list(text)
+	return ''.join(uni)
+	
