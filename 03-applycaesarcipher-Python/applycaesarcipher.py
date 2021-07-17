@@ -11,8 +11,36 @@
 
 
 def fun_applycaesarcipher(msg, shift):
-	return ""
+	shift=shift%26
+	string=''
+	s=0
+	for i in msg:
+		if i!=" ":
+			if ord(i) in range(65,91):
+				
+				if ord(i)+shift>90:
+					s=ord(i)+shift-26
+					print("It is shifted eback",s )
+				elif ord(i)+shift<65:
+					s=ord(i)+shift+26
+				else:
+					s=ord(i)+shift
+			
+		
+			elif ord(i) in range(97,123):
+				print(i)
+				if ord(i)+shift>122:
+					s=ord(i)+shift-26
+				elif ord(i)+shift<97:
+					s=ord(i)+shift+26
+				else:
+					s=ord(i)+shift	
+			string=string+chr(s)
+		else:
 
+			string+=" "
+	return string
+print(fun_applycaesarcipher("Hi I am sujitha",2))
 
 
 
