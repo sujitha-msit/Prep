@@ -20,9 +20,31 @@
 # result
 # [ [ 2, 3, 5],
 #   [ 0, 1, 3] ]
-
+# Destructive way of doing it
 def removeRowAndCol(L, row, col):
-    # Your code goes here...
-    pass
+    L.pop(row)
+    for i in range(len(L)):
+        L[i].pop(col)
+    return L
+def nondest(L,row,col):
+    res=[]
+    for i in range(len(L)):
+        a=[]
+        if i!=row:
+            # print(i)
+            for j in range(len(L[i])):
+                if j!=col:
+                    # print(j)
+                    a.append(L[i][j])
+
+            res.append(a)
+    return res
+
+
+lis=[ [ 2, 3, 4, 5],
+  [ 8, 7, 6, 5],
+  [ 0, 1, 2, 3] ]
+# print(removeRowAndCol(lis,1,2))
+print("This is non desturctive method of doing it",nondest(lis,1,2))
 
 # Write your own test cases.
