@@ -1,5 +1,4 @@
-for i in "Home alone":
-    if i in range(65,97):
-        print("yes")
-    else:
-        print("no")
+noty=[1,8,7]
+for i in range(10):
+    
+
