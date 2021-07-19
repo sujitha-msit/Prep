@@ -15,4 +15,24 @@
 
 def ismostlymagicsquare(a):
 	# Your code goes here
-	pass
+	r=[]
+	
+	diag=0
+	for i in range(len(a)):
+		row_sum=0
+		col_sum=0
+		for j in range(len(a)):
+			row_sum+=a[i][j]
+			col_sum+=a[j][i]
+			if i==j:
+				diag+=a[i][j]
+		r.append(row_sum)
+		r.append(col_sum)
+	r.append(diag)
+	print(r)
+	if  len(set(r))==1:
+		return True
+	else:
+		return False
+a=[[2, 7, 6], [9, 5, 1], [4, 3, 8]]
+print(ismostlymagicsquare(a))
