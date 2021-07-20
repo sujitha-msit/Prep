@@ -8,5 +8,5 @@
 # Another hint: This can be written using just one or two lines of Python.
 
 def largestperfectsquare(n):
-	# your code goes here
+	return int(n**0.5)**2
 	pass
