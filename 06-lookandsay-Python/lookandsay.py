@@ -11,4 +11,11 @@
 
 def lookandsay(a):
 	# Your code goes here
-	pass
+	prev=0
+	count=1
+	for i in a:
+		if i==prev:
+			count+=1
+		else:
+
+	return newlist
