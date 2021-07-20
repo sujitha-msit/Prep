@@ -10,7 +10,7 @@ def fun_circlesintersect(x1, y1, r1, x2, y2, r2):
 		return False
 	else:
 		return True
-print(fun_circlesintersect(5, 6, 14, 8, 7, 9))
-print(fun_circlesintersect(3, 4, 5, 14, 18, 8))
-print(fun_circlesintersect(2, 3, 12, 15, 28, 10))
-print(fun_circlesintersect(-10, 8, 30, 14, -24, 10))
+# print(fun_circlesintersect(5, 6, 14, 8, 7, 9))
+# print(fun_circlesintersect(3, 4, 5, 14, 18, 8))
+# print(fun_circlesintersect(2, 3, 12, 15, 28, 10))
+# print(fun_circlesintersect(-10, 8, 30, 14, -24, 10))
