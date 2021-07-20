@@ -54,8 +54,8 @@ def alphaAsia():
 # Note: Check for test cases to understand the output format.
 locations ={'North America': {"USA": ['Mountain View','Atlanta']},
             'Asia':{'India':['Bangalore'],'China':['Shanghai']}}
-sortUSA()
-alphaAsia()
+# sortUSA()
+# alphaAsia()
 # Bangalore (India, Asia)
 # Atlanta (USA, North America)
 # Cairo (Egypt, Africa)
