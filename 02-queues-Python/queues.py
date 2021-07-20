@@ -10,22 +10,22 @@ class Queue:
 
     def enqueue(self, new_element):
         self.storage.append(new_element)
-        print("The elements are:",self.storage)
+        # print("The elements are:",self.storage)
 
     def peek(self):
-        return self.storage
+        return self.storage[0]
        
     def dequeue(self):
-
-        self.storage.pop(0)
+        
+        return self.storage.pop(0)
         print("The elements are popped",self.storage)
 
 
-q = Queue(1)
-# print(q)
-q.enqueue(2)
-# print(q)
-q.enqueue(3)
-# print(q)
-q.dequeue()
-# print(q)
+# q = Queue(1)
+# # print(q)
+# q.enqueue(2)
+# # print(q)
+# q.enqueue(3)
+# # print(q)
+# q.dequeue()
+# # print(q)
