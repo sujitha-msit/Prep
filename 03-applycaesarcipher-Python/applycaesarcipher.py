@@ -15,7 +15,7 @@ def fun_applycaesarcipher(msg, shift):
 	string=''
 	s=0
 	for i in msg:
-		if i!=" ":
+		if  ord(i) in range(65,91) or ord(i) in range(97,123):
 			if ord(i) in range(65,91):
 				
 				if ord(i)+shift>90:
@@ -37,10 +37,10 @@ def fun_applycaesarcipher(msg, shift):
 					s=ord(i)+shift	
 			string=string+chr(s)
 		else:
-
-			string+=" "
+			print("hey space encountered",i)
+			string+=i
 	return string
-print(fun_applycaesarcipher("Hi I am sujitha",2))
+print(fun_applycaesarcipher("Hi I @m sujitha",2))
 
 
 
