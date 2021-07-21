@@ -6,5 +6,33 @@
 
 
 def nthpowerfulnumber(n):
-	# Your code goes here
-	pass
+	number=1
+	case=0
+	a=[]
+	while(len(a)==n):
+		fac=primefactor(number)
+		for i in fac:
+			if number%(i**2)!=0:
+				break
+				
+		
+		
+		return 0
+
+def primefactor(num):
+	a=[]
+	for i in range(3,num//2+1):
+		if num%i==0:
+			if prime(i):
+				a.append(i)
+	return a
+
+		
+
+
+def prime(num):
+	for i in range(3,int(num**0.5)):
+		if num%i==0:
+			return False
+	return True
+	
