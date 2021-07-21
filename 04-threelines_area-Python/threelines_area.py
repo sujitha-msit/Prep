@@ -5,5 +5,5 @@
 import math
 
 def fun_threelines_area(a, b, c):
-	return 0
+	se778return 0
 	
