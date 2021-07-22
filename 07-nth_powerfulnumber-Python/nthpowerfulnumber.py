@@ -13,11 +13,13 @@ def nthpowerfulnumber(n):
 		fac=primefactor(number)
 		for i in fac:
 			if number%(i**2)!=0:
+				flag=False
 				break
-				
+		if flag==True:
+			a.append(number)
 		
+	return a[-1]		
 		
-		return 0
 
 def primefactor(num):
 	a=[]
