@@ -17,6 +17,7 @@ def nthpowerfulnumber(n):
 				break
 		if flag==True:
 			a.append(number)
+			n+=1
 		
 	return a[-1]		
 		
