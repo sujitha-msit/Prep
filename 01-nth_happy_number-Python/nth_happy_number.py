@@ -15,5 +15,26 @@
 # assert(nth_happy_number(8) == 31)
 
 
+a=[]
 def nth_happy_number(n):
-	return 0
+	return a[n-1]
+
+
+
+def ishappynumber(n):
+	try:
+		while(True):
+			li=map(int,list(str(n)))
+			li=[x**2 for x in li]
+			print(li)
+			if sum(li)==1:
+				return True
+			else:
+				n=sum(li)
+	except:
+		return False
+number=1
+while(len(a)!=9):
+	if ishappynumber(number):
+		a.append(number)
+	number+=1
