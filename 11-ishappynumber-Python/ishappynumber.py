@@ -5,6 +5,7 @@
 # are happy numbers.
 
 # https://en.wikipedia.org/wiki/Happy_number#:~:text=In%20number%20theory%2C%20a%20happy,starting%20with%20and%20eventually%20reaches
+
 # Read more about the happy number from the above link.
 
 # Write the function ishappynumber(n) which takes a possibly-negative integer and returns True if it is happy and 
@@ -18,5 +19,16 @@
 # assert(ishappynumber(405) == False)
 
 def ishappynumber(n):
-	# your code goes here
-	pass
+	try:
+		while(True):
+			li=map(int,list(str(n)))
+			li=[x**2 for x in li]
+			print(li)
+			if sum(li)==1:
+
+				return True
+			else:
+				n=sum(li)
+	except:
+		return False
+# print(ishappynumber(1))
