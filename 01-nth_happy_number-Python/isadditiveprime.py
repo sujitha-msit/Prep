@@ -10,7 +10,7 @@ def prime(number):
 def isAdditivePrime(number):
     if prime(number):
         if(len(str(number))!=1):
-            return isadditive(sum(map(int,list(str(number)))))
+            return isAdditivePrime(sum(map(int,list(str(number)))))
         else:
             return True
     else:
@@ -27,6 +27,6 @@ assert (isAdditivePrime(41) == True)
 assert (isAdditivePrime(98) == False)
 assert (isAdditivePrime(198) == False)
 assert (isAdditivePrime(290) == False)
-assert (isAdditivePrime(67) == True)
+assert (isAdditivePrime(67) == False)
 assert (isAdditivePrime(97) == False)
 print("All test cases passed... :-)")
