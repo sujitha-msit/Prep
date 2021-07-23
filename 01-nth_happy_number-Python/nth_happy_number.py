@@ -14,7 +14,7 @@
 # assert(nth_happy_number(7) == 28)
 # assert(nth_happy_number(8) == 31)
 
-
+import time
 a=[]
 def nth_happy_number(n):
 	return a[n-1]
@@ -22,8 +22,11 @@ def nth_happy_number(n):
 
 
 def ishappynumber(n):
-	try:
-		while(True):
+	start_time=int(time.time())
+	end_time=int(time.time())
+	while(True):
+		if (end_time-start_time<3):
+			print(start_time,end_time)
 			li=map(int,list(str(n)))
 			li=[x**2 for x in li]
 			print(li)
@@ -31,10 +34,14 @@ def ishappynumber(n):
 				return True
 			else:
 				n=sum(li)
-	except:
-		return False
+			end_time=int(time.time())
+		else:
+			return False
 number=1
-while(len(a)!=9):
+while(len(a)!=10):
 	if ishappynumber(number):
+		print("*****************************The numbber is************************",number)
 		a.append(number)
 	number+=1
+# ishappynumber(1)
+print(a)
