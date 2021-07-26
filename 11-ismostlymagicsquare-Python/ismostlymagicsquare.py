@@ -13,11 +13,15 @@
 #   [ 2, 1]]
 # Each row and each column add to 3, but one diagonal adds to 2 and the other to 4.
 
+from typing_extensions import ParamSpecArgs
+
+
 def ismostlymagicsquare(a):
 	# Your code goes here
 	r=[]
 	
 	diag=0
+	prev=sum(a[0][:])
 	for i in range(len(a)):
 		row_sum=0
 		col_sum=0
@@ -26,13 +30,25 @@ def ismostlymagicsquare(a):
 			col_sum+=a[j][i]
 			if i==j:
 				diag+=a[i][j]
-		r.append(row_sum)
-		r.append(col_sum)
-	r.append(diag)
-	print(r)
-	if  len(set(r))==1:
+		if row_sum==prev and row_sum==col_sum:
+			pass
+		else:
+			return False
+	if row_sum==diag:
 		return True
 	else:
 		return False
-a=[[2, 7, 6], [9, 5, 1], [4, 3, 8]]
-print(ismostlymagicsquare(a))
+
+	# 	r.(row_sum)
+	# 	r.append(col_sum)
+	# r.append(diag)
+	# if row_sum==col_sum and col_sum==diag and diag==row_sum:
+	# 	return True
+	# else:
+	# 	return False
+	# if  len(set(r))==1:
+	# 	return True
+	# else:
+# 	# 	return False
+# a=[[1, 7, 6], [9, 5, 1], [4, 3, 8]]
+# print(ismostlymagicsquare(a))
