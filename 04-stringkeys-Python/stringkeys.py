@@ -33,10 +33,12 @@ class HashTable(object):
         # Your code goes here
         self.hash_value=ord(string[0])*100+ord(string[1])
         pass
-# hashing=HashTable()
-# hashing.calculate_hash_value("UDACITY")
-# print(hashing.lookup("UDACITY"))
-# hashing.store("UDACITY")
-# print(hashing.lookup("UDACITY"))
+    def printing(self):
+        return self.table
+hashing=HashTable()
+hashing.calculate_hash_value("Sujitha")
+hashing.store("Sujitha")
+print(hashing.lookup("Sujitha"))
+print(hashing.printing())
 
 
