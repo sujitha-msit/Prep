@@ -26,10 +26,10 @@ def ishappynumber(n):
 	end_time=int(time.time())
 	while(True):
 		if (end_time-start_time<3):
-			print(start_time,end_time)
+			# print(start_time,end_time)
 			li=map(int,list(str(n)))
 			li=[x**2 for x in li]
-			print(li)
+			# print(li)
 			if sum(li)==1:
 				return True
 			else:
@@ -38,7 +38,8 @@ def ishappynumber(n):
 		else:
 			return False
 number=1
-while(len(a)!=10):
+# n=int(input())
+while(len(a)!=11):
 	if ishappynumber(number):
 		print("*****************************The numbber is************************",number)
 		a.append(number)
