@@ -13,14 +13,10 @@
 # assert(nth_happy_number(6) == 23)
 # assert(nth_happy_number(7) == 28)
 # assert(nth_happy_number(8) == 31)
-
 import time
 a=[]
 def nth_happy_number(n):
 	return a[n-1]
-
-
-
 def ishappynumber(n):
 	start_time=int(time.time())
 	end_time=int(time.time())
