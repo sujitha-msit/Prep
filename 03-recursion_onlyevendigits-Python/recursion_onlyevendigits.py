@@ -8,5 +8,9 @@
 # Also the function returns the empty list if the original list is empty. 
 # Remember to not use strings. You may not use loops/iteration in this problem.
 
-def fun_recursion_onlyevendigits(l): 
-		return []
+def fun_recursions_alternatingsum(l): 
+    # your code goes here
+    if(len(l)==0):
+        return 0
+    else:
+        return l[0]-fun_recursions_alternatingsum(l[1:])
