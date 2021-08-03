@@ -4,5 +4,36 @@
 # diagonally.
 
 def canqueenattack(qR, qC, oR, oC):
-	# Your code goes here
-	pass
+	x=qR
+	y=qC
+	a=[]
+	while(0<x<8 and 0<y<8):
+		a.append((x,y))
+		x+=1
+		y+=1
+	x=qR
+	y=qC
+	while(0<x<8 and 0<y<8):
+		a.append((x,y))
+		x-=1
+		y+=1
+	x=qR
+	y=qC
+	while(0<x<8 and 0<y<8):
+		a.append((x,y))
+		x+=1
+		y-=1
+	x=qR
+	y=qC
+	while(0<x<8 and 0<y<8):
+		a.append((x,y))
+		x-=1
+		y-=1
+	if qR==oR or qC==oC:
+		return True
+	elif (oR,oC) in a:
+		return True
+	else:
+		return False
+
+	
