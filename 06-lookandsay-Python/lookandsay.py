@@ -12,10 +12,22 @@
 def lookandsay(a):
 	# Your code goes here
 	prev=0
-	count=1
+	count=0
+	ai=[]
 	for i in a:
 		if i==prev:
 			count+=1
 		else:
-
-	return newlist
+			ai.append((count,prev))
+			count=1
+			prev=i
+	if len(a)<1:
+		return []
+	else:
+		if a[-1]==a[-2]:
+			ai.append((count,a[-1]))
+		else:
+			ai.append((1,a[-1]))
+	return ai[1:]
+print(lookandsay([1,1,1,1]))
+print(lookandsay([3,3,8,-10,-10,-10]))
