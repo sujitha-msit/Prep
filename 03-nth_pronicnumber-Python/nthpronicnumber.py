@@ -5,4 +5,9 @@
 
 def nthpronicnumber(n):
 	# Your code goes here
-	pass
+	return a[n]
+a=[]
+i=0
+while(len(a)!=51):
+	a.append(i*(i+1))
+	i=i+1
