@@ -10,6 +10,11 @@
 
 def nondestructiveRemoveRepeats(L):
     # Your code goes here...
+    a=[]
+    for i in L:
+        if i not in a:
+            a.append(i)
+    return a
     pass
 
 assert(nondestructiveRemoveRepeats([1, 3, 5, 3, 3, 2, 1, 7, 5]) == [1, 3, 5, 2, 7])
