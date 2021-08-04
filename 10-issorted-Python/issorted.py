@@ -8,9 +8,9 @@
 def issorted(a):
     # your code goes here
     count=0
+    if len(a)<=1:
+        return True
     for i in range(len(a)):
-        if(i==len(a)-1):
-            break
         if(a[i]>a[i+1]):
             count+=1
     if(count==0):
@@ -18,3 +18,4 @@ def issorted(a):
     elif(count==len(a)-1):
         return True
     return False
+print(issorted([5,4,3,5,1]))
