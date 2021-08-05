@@ -9,16 +9,19 @@
 
 
 def fun_nth_smithnumber(n):
-   
+    n=n+1
     number=3
     i=0
+    a=[]
     while(True):
         if smith(number)==True:
             i+=1
+            a.append(number)
         if i==n:
             break
         number=number+1
-    return number
+    
+    return a[-1]
 def smith(number):
     a=[]
     original=number
@@ -50,8 +53,8 @@ def prime(number):
         if number%i==0:
             return False
     return True
-# print(smith(22))
+print(smith(3))
 # for i in range(5):
 # print(fun_nth_smithnumber(5))
-print(smith(378))
-print(smith(22))
+# for i in range(5):
+print(fun_nth_smithnumber(0))
