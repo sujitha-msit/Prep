@@ -10,13 +10,14 @@ class Dog:
     def __init__(self,name,age):
         self.name=name
         self.age=age
-class SayHi(Dog):
+class SayHi():
 
     def sayHi(self,dog):
         ans="Hi, my name is "+dog.name+" and I am "+dog.age+" years old!"
         return ans
 d1=Dog("snoopy","4")
 d2=Dog("elf","3")
-print(SayHi.sayHi(d1))
-print(SayHi.sayHi(d2))
+one=SayHi()
+print(one.sayHi(d1))
+print(one.sayHi(d2))
 
