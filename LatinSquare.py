@@ -7,6 +7,21 @@
 
 # Write your own test cases...
 
-def isLatinSquare(lst):
-    # Your code goes here...
-    pass
+
+def isLatinSquare(n):
+    col=[]
+    for i in range(len(n)):
+        cols=[]
+        for j in range(len(n)):
+            cols.append(n[j][i])
+            cols.sort()
+        col.append(cols)
+    col.append(n[0])
+    print(col)
+    for i in range(len(col)-1):
+        if sorted(col[i])==sorted(col[i+1]):
+            return True
+        else:
+            return False
+print(isLatinSquare([[1,2,3],[2,3,1],[3,1,2]]))
+print("All test cases passed")
